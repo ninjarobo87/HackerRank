@@ -1,0 +1,123 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the solve function below.
+    static void solve(double meal_cost, int tip_percent, int tax_percent) {
+       double tip = 0.0;
+       double tax = 0.0;
+       double totalCost = 0.0;
+
+       tip = meal_cost * ((double)tip_percent/100);
+       tax = meal_cost * ((double)tax_percent/100);
+       totalCost = Math.round(meal_cost+tip+tax);
+       System.out.println((int)totalCost); 
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        double meal_cost = scanner.nextDouble();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int tip_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int tax_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        solve(meal_cost, tip_percent, tax_percent);
+
+        scanner.close();
+    }
+}
+-------------------------------------------------------------------------------------	
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        if (N%2 != 0) {System.out.println("Weird");}
+        else if (N>20) {System.out.println("Not Weird");}
+        else if (N>=2 && N<=5){System.out.println("Not Weird");}
+        else if (N>=6 && N<=20){System.out.println("Weird");}
+        scanner.close();
+    }
+}
+
+-------------------------------------------------------------------------------------
+
+using namespace std;
+#include <iostream>
+
+class Person{
+    public:
+        int age;
+        Person(int initialAge);
+        void amIOld();
+        void yearPasses();
+    };
+
+    Person::Person(int initialAge){
+        // Add some more code to run some checks on initialAge
+      age = initialAge;
+      if (initialAge < 0) 
+       {cout<<"Age is not valid, setting age to 0.\n";
+        age = 0;}
+      
+    }
+
+    void Person::amIOld(){
+        // Do some computations in here and print out the correct statement to the console 
+        if (age < 13){cout << "You are young.\n";}
+        else if(age >= 13 && age < 18){cout << "You are a teenager.\n";}
+        else if (age >= 18){cout << "You are old.\n";}
+    }
+
+    void Person::yearPasses(){
+        // Increment the age of the person in here
+        age = age+1;
+    //cout<< "Now Age is" << age;
+    }
+
+int main(){
+------------------------------------
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main()
+{
+    int n;
+    int i;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    for (i=1;i<=10;i++){cout<<n<<" x "<<i<<" = "<<n*i<<"\n";}
+    return 0;
+}
+
+----------------------------------
